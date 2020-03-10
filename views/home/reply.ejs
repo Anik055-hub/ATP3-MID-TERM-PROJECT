@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reply Message</title>
+	<link rel="stylesheet" type="text/css" href="abc/style.css">
+</head>
+<body>
+	<div>
+		<h1>Update Message</h1> 		
+	</div>
+     <br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<a href="/home/allmessage"> Back to message</a> |
+	<a href="/logout"> logout</a><br>
+
+	<form method="post">
+		<table>
+			<tr>
+				<td>Id</td>
+				<td><input type="text" readonly name="message_id" value="<%=message.message_id%>"></td>
+			</tr>
+			<tr>
+				<td>From</td>
+				<td><input type="text" name="from" value="<%=message.from%>"></td>
+			</tr>
+			<tr>
+				<td>To</td>
+				<td><input type="text" name="to" value="<%=message.to%>"></td>
+			</tr>
+			<tr>
+				<td>Message</td>
+				<td><input type="text" name="msg" value="<%=message.msg%>"></td>
+			</tr>
+			<tr>
+				<td>Date</td>
+				<td><input type="datepicker" name="msg_date" value="<%=message.msg_date%>"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" name="submit" value="Update"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

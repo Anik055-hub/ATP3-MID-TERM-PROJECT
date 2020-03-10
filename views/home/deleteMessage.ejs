@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete Message</title>
+	<link rel="stylesheet" type="text/css" href="abc/style.css">
+</head>
+<body>
+	<div>
+		<h1>Delete Message!</h1> 		
+	</div>
+     <br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<a href="/home/allmessage"> Back to message</a> |
+	<a href="/logout"> logout</a><br>
+
+	<form method="post">
+		<table>
+			<tr>
+				<td>Id</td>
+				<td><%=message.message_id%></td>
+			</tr>
+			<tr>
+				<td>From</td>
+				<td><%=message.from%></td>
+			</tr>
+			<tr>
+				<td>To :</td>
+				<td><%=message.to%></td>
+			</tr>
+			<tr>
+				<td>Message :</td>
+				<td><%=message.msg%></td>
+			</tr>
+            <tr>
+				<td>Date :</td>
+				<td><%=message.msg_date%></td>
+			</tr>
+			<tr>
+				<td><h3>Are you sure? </h3></td>
+				<td><input type="submit" name="submit" value="confirm"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

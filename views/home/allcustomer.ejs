@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customer Page</title>
+	<link rel="stylesheet" type="text/css" href="abc/style.css">
+</head>
+<body>
+	<div>
+		<h1>Customer List</h1> 		
+	</div>
+     <br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <div><h2>
+	<a href="/home">Back</a> |
+	<a href="/logout"> logout</a> |
+	<a href="/home/allmessage"> View All Message </a> |
+	<a href="/home/feedback"> Search Message & Customer's feedback</a></h2>
+   </div>
+	<br>
+	<form method="post"><h2>
+		username:<input type="text" name="uname" >
+	    <input type="submit" name="submit" value="search">
+	</h2></form><br>
+
+	<table border="1">
+		<tr>
+			<td>Id</td>
+			<td>Username</td>
+			<td>name</td>
+			<td>Password</td>
+			<td>Type</td>
+			<td>phone</td>
+			<td>Active_posts</td>
+			<td>Pending_posts</td>
+			<td>Sold_posts</td>
+			<td>Total_posts</td>
+			<td>Action</td>
+		</tr>
+		<% for(var i=0; i < customerlist.length; i++){ %>
+		<tr>
+			<td><%= customerlist[i].customer_id %></td>
+			<td><%= customerlist[i].username %></td>
+			<td><%= customerlist[i].name %></td>
+			<td><%= customerlist[i].password %></td>
+			<td><%= customerlist[i].type %></td>
+			<td><%= customerlist[i].phone %></td>
+			<td><%= customerlist[i].active_posts %></td>
+			<td><%= customerlist[i].pending_posts %></td>
+			<td><%= customerlist[i].sold_posts %></td>
+			<td><%= customerlist[i].total_posts %></td>
+			<td>
+				<a href="/home/delete/<%= customerlist[i].customer_id %>">DELETE</a>  
+			</td>
+		</tr>
+		<% } %>
+	</table>
+</body>
+</html>

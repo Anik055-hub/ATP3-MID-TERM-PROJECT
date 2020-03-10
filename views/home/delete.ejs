@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete page</title>
+	<link rel="stylesheet" type="text/css" href="abc/style.css">
+</head>
+<body>
+	<div>
+		<h1>Delete Customer!</h1> 		
+	</div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<a href="/home/allcustomer"> Back </a> |
+	<a href="/logout"> logout</a><br>
+
+	<form method="post">
+		<table>
+			<tr>
+				<td>Id :</td>
+				<td><%=customer.customer_id%></td>
+			</tr>
+			<tr>
+				<td>Username :</td>
+				<td><%=customer.username%></td>
+			</tr>
+			<tr>
+				<td>Name :</td>
+				<td><%=customer.name%></td>
+			</tr>
+			<tr>
+				<td>Password :</td>
+				<td><%=customer.password%></td>
+			</tr>
+			<tr>
+				<td><h3>Are you sure? </h3></td>
+				<td><input type="submit" name="submit" value="confirm"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Most Visited Property</title>
+	<link rel="stylesheet" type="text/css" href="abc/style.css">
+</head>
+<body>
+	<div>
+		<h1>Most Visited Property</h1> 		
+	</div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<a href="/home/propertyhistory"> Back</a> |
+	<a href="/logout"> logout</a> 
+
+	<table border="1">
+		<tr>
+			<td>Id</td>
+			<td>Title</td>
+			<td>Location</td>
+			<td>Purpose</td>
+			<td>Price</td>
+			<td>Floor</td>
+			<td>Square_fit</td>
+			<td>Description</td>
+			<td>Status</td>
+			<td>No_of_clicks</td>
+			<td>Posted_by</td>
+			<td>Posted_date</td>
+			<td>Action</td>
+		</tr>
+		<% for(var i=0; i < propertylist.length; i++){ %>
+		<tr>
+			<td><%= propertylist[i].property_id %></td>
+			<td><%= propertylist[i].title %></td>
+			<td><%= propertylist[i].location %></td>
+			<td><%= propertylist[i].purpose %></td>
+			<td><%= propertylist[i].price %></td>
+			<td><%= propertylist[i].floor %></td>
+			<td><%= propertylist[i].sq_ft %></td>
+			<td><%= propertylist[i].description %></td>
+			<td><%= propertylist[i].status %></td>
+			<td><%= propertylist[i].no_of_clicks %></td>
+			<td><%= propertylist[i].posted_by %></td>
+			<td><%= propertylist[i].posted_date %></td>
+			<td>
+				<a href="/home/reject/<%= propertylist[i].property_id %>">DELETE</a>  
+			</td>
+		</tr>
+		<% } %>
+	</table>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Message Box</title>
+	<link rel="stylesheet" type="text/css" href="abc/style.css">
+</head>
+<body>
+	<div>
+		<h1>Message Box</h1> 		
+	</div>
+     <br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<a href="/home/allcustomer"> Back</a> |
+	<a href="/logout"> logout</a> 
+	<br>
+	<table border="1">
+		<tr>
+			<td>Id</td>
+			<td>From</td>
+			<td>To</td>
+			<td>Message</td>
+			<td>Date</td>
+			<td>Action</td>
+		</tr>
+		<% for(var i=0; i < messagelist.length; i++){ %>
+		<tr>
+			<td><%= messagelist[i].message_id %></td>
+			<td><%= messagelist[i].from %></td>
+			<td><%= messagelist[i].to %></td>
+			<td><%= messagelist[i].msg %></td>
+			<td><%= messagelist[i].msg_date %></td>
+			<td>
+				<a href="/home/reply/<%= messagelist[i].message_id %>">Reply</a> | 
+				<a href="/home/deleteMessage/<%= messagelist[i].message_id %>">Delete</a>  
+			</td>
+		</tr>
+		<% } %>
+	</table>
+</body>
+</html>

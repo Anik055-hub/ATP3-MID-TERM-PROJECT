@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	<link rel="stylesheet" type="text/css" href="abc/style.css">
+</head>
+<body>
+	<div>
+		<h1>Welcome Employee Homepage : <%= customer.username%></h1> 		
+	</div>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div><h2>
+	Name:<%= customer.username %>    <br>
+	Id: <%= customer.customer_id %> <br>
+	Password: <%= customer.password %><br>
+	Type: <%= customer.type %>
+    </h2></div><br>
+    <div><h2>	
+	<a href="/home/allcustomer">View Customer</a> |
+	<a href="/home/allproperty">View Property</a> |
+	<a href="/logout"> logout</a></h2>
+    </div><br>
+</body>
+</html>

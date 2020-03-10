@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reject Message</title>
+	<link rel="stylesheet" type="text/css" href="abc/style.css">
+</head>
+<body>
+	<div>
+		<h1>Reject Property!</h1> 		
+	</div>
+     <br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<a href="/home/allproperty"> Back to property</a> |
+	<a href="/logout"> logout</a><br>
+
+	<form method="post">
+		<table>
+			<tr>
+				<td>Id</td>
+				<td><%=property.property_id%></td>
+			</tr>
+			<tr>
+				<td>Title</td>
+				<td><%=property.title%></td>
+			</tr>
+			<tr>
+				<td>Location :</td>
+				<td><%=property.location%></td>
+			</tr>
+			<tr>
+				<td>Purpose :</td>
+				<td><%=property.purpose%></td>
+			</tr>
+            <tr>
+				<td>Price :</td>
+				<td><%=property.price%></td>
+			</tr>
+			<tr>
+				<td>Floor :</td>
+				<td><%=property.floor%></td>
+			</tr>
+			<tr>
+				<td>Square_fit :</td>
+				<td><%=property.square_fit%></td>
+			</tr>
+			<tr>
+				<td>Description :</td>
+				<td><%=property.description%></td>
+			</tr>
+			<tr>
+				<td>Status :</td>
+				<td><%=property.status%></td>
+			</tr>
+			<tr>
+				<td>No_of_clicks :</td>
+				<td><%=property.no_of_clicks%></td>
+			</tr>
+			<tr>
+				<td>Posted_by :</td>
+				<td><%=property.posted_by%></td>
+			</tr>
+			<tr>
+				<td>Posted_date :</td>
+				<td><%=property.posted_date%></td>
+			</tr>
+			<tr>
+				<td><h3>Are you sure? </h3></td>
+				<td><input type="submit" name="submit" value="confirm"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

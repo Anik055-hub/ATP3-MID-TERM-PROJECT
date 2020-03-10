@@ -1,0 +1,12 @@
+*
+{
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: sans-seri;
+	background-image: url(background3.jpg);
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+}
